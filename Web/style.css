@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary: #7b1e2b;
+    --primary-dark: #4a0f18;
+    --secondary: #ffffff;
+    --danger: #b3001b;
+    --background: #0d0d0d;
+    --card: #1a1a1a;
+    --text: #ffffff;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.login {
+    width: 350px;
+    margin: 100px auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.login:hover {
+    transform: translateY(-8px);
+}
+
+.login h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #111111;
+    color: var(--text);
+}
+
+.login input:focus {
+    outline: 2px solid var(--primary);
+}
+
+.login button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login button:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    background: var(--secondary);
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+header button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.topo {
+    padding: 20px;
+}
+
+.topo button {
+    background: var(--secondary);
+    color: black;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.topo button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    background: var(--card);
+    border-collapse: collapse;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--text);
+}
+
+thead {
+    background: var(--primary);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #222222;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.btnVisualizar {
+    background: var(--primary);
+    color: white;
+}
+
+.btnExcluir {
+    background: var(--danger);
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal form {
+    width: 400px;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal h2 {
+    text-align: center;
+    color: var(--primary);
+}
+
+.modal input {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #111111;
+    color: var(--text);
+}
+
+.modal input:focus {
+    outline: 2px solid var(--primary);
+}
+
+.modal button[type="submit"] {
+    background: var(--primary);
+    color: white;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .login {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    .modal form {
+        width: 90%;
+    }
+}
