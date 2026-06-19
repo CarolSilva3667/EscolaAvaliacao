@@ -1,4 +1,4 @@
-# EscolaAvaliacao
+# Escola Avaliacao
 Sistema de gerenciamento de avaliações escolares desenvolvido como projeto full stack.
 O sistema possui um back-end em API e um front-end web integrado, permitindo operações como cadastro, visualização, edição e exclusão de dados.
 
